@@ -1,0 +1,8 @@
+select * from todo_running where rowid > 1024;
+-- display last bit of table
+
+update todo_running set timeenter = '2022-05-27 09:05:05' where rowid = 1028 ;
+
+select * from todo_running where rowid > 1024;
+
+-- display last bit of table again after updates...

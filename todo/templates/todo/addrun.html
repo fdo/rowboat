@@ -1,0 +1,16 @@
+{% extends 'todo/base.html' %}
+{% block title %}
+Log today's run, at least the time
+{% endblock %}
+ 
+{% block content %}
+    <h4>Log today's run</h4>
+    <form method="post" action="/addrun/" class="form-group">
+        {% csrf_token %}
+        <div class="input-group mb-3">
+            {{form.as_p}}
+            <button type="submit", name="save" class="btn btn-success">Add Time</button>
+        </div>
+    </form>
+
+{% endblock %}

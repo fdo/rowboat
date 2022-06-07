@@ -1,0 +1,14 @@
+select * from todo_running where rowid > 1028;
+select * from todo_weight where rowid > 918;
+
+-- display last bit of the tables
+
+update todo_running set timeenter = '2022-05-29 09:05:05' where rowid = 1029 ;
+
+update todo_weight set timeenter = '2022-05-29 09:05:05' where rowid = 919 ;
+
+-- display again after updates...
+
+
+select * from todo_running where rowid > 1028;
+select * from todo_weight where rowid > 918;

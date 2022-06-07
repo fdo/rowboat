@@ -1,0 +1,85 @@
+ Volume in drive C is Windows-SSD
+ Volume Serial Number is 96D0-F03C
+
+ Directory of C:\Users\ferna\code\project02\rowboat
+
+01/31/2022  08:10 AM    <DIR>          .
+01/29/2022  10:22 PM    <DIR>          ..
+01/30/2022  08:09 PM           147,456 db.sqlite3
+01/31/2022  08:10 AM                 0 dir.txt
+01/30/2022  08:46 PM                40 go.bat
+***01/29/2022  10:22 PM               685 manage.py
+01/29/2022  10:23 PM    <DIR>          rowboat
+01/30/2022  08:30 PM    <DIR>          todo
+               4 File(s)        148,181 bytes
+
+ Directory of C:\Users\ferna\code\project02\rowboat\rowboat
+
+01/29/2022  10:23 PM    <DIR>          .
+01/31/2022  08:10 AM    <DIR>          ..
+01/29/2022  10:22 PM               407 asgi.py
+***01/30/2022  08:03 PM             3,388 settings.py
+***01/30/2022  08:28 PM               864 urls.py
+01/29/2022  10:22 PM               407 wsgi.py
+01/29/2022  10:22 PM                 0 __init__.py
+01/30/2022  08:29 PM    <DIR>          __pycache__
+               5 File(s)          5,066 bytes
+
+ Directory of C:\Users\ferna\code\project02\rowboat\rowboat\__pycache__
+
+01/30/2022  08:29 PM    <DIR>          .
+01/29/2022  10:23 PM    <DIR>          ..
+01/30/2022  08:04 PM             2,310 settings.cpython-310.pyc
+01/30/2022  08:29 PM               972 urls.cpython-310.pyc
+01/29/2022  10:23 PM               553 wsgi.cpython-310.pyc
+01/29/2022  10:23 PM               150 __init__.cpython-310.pyc
+               4 File(s)          3,985 bytes
+
+ Directory of C:\Users\ferna\code\project02\rowboat\todo
+
+01/30/2022  08:30 PM    <DIR>          .
+01/31/2022  08:10 AM    <DIR>          ..
+01/29/2022  10:24 PM                66 admin.py
+01/29/2022  10:24 PM               146 apps.py
+01/30/2022  08:04 PM    <DIR>          migrations
+***01/30/2022  07:42 PM               996 models.py
+01/29/2022  10:24 PM                63 tests.py
+***01/30/2022  08:39 PM               124 urls.py
+
+***01/30/2022  08:44 PM             1,326 views.py
+01/29/2022  10:24 PM                 0 __init__.py
+01/30/2022  08:46 PM    <DIR>          __pycache__
+               7 File(s)          2,721 bytes
+
+ Directory of C:\Users\ferna\code\project02\rowboat\todo\migrations
+
+01/30/2022  08:04 PM    <DIR>          .
+01/30/2022  08:30 PM    <DIR>          ..
+01/30/2022  08:04 PM             2,264 0001_initial.py
+01/29/2022  10:24 PM                 0 __init__.py
+01/30/2022  08:08 PM    <DIR>          __pycache__
+               2 File(s)          2,264 bytes
+
+ Directory of C:\Users\ferna\code\project02\rowboat\todo\migrations\__pycache__
+
+01/30/2022  08:08 PM    <DIR>          .
+01/30/2022  08:04 PM    <DIR>          ..
+01/30/2022  08:08 PM             1,280 0001_initial.cpython-310.pyc
+01/30/2022  08:04 PM               158 __init__.cpython-310.pyc
+               2 File(s)          1,438 bytes
+
+ Directory of C:\Users\ferna\code\project02\rowboat\todo\__pycache__
+
+01/30/2022  08:46 PM    <DIR>          .
+01/30/2022  08:30 PM    <DIR>          ..
+01/30/2022  08:04 PM               188 admin.cpython-310.pyc
+01/30/2022  08:04 PM               422 apps.cpython-310.pyc
+01/30/2022  08:04 PM             1,505 models.cpython-310.pyc
+01/30/2022  08:40 PM               277 urls.cpython-310.pyc
+01/30/2022  08:46 PM             1,312 views.cpython-310.pyc
+01/30/2022  08:04 PM               147 __init__.cpython-310.pyc
+               6 File(s)          3,851 bytes
+
+     Total Files Listed:
+              30 File(s)        167,506 bytes
+              20 Dir(s)  252,061,503,488 bytes free

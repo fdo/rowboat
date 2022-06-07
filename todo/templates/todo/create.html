@@ -1,0 +1,14 @@
+{% extends 'todo/base.html' %}
+{% block title %}
+Add today's weight to the database
+{% endblock %}
+ 
+{% block content %}
+Add Today's Weight to the Database
+<form method="post" action="/create/">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit",name="save">Add Weight</button>
+</form
+
+{% endblock %}

@@ -1,0 +1,6 @@
+select * from todo_running where rowid = 1030; 
+select * from todo_running where rowid = 1031; 
+select * from todo_running where rowid = 1032; 
+select * from todo_weight  where rowid = 919; 
+select * from todo_weight  where rowid = 920; 
+select * from todo_weight  where rowid = 921; 

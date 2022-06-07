@@ -1,0 +1,102 @@
+from datetime import datetime
+from django.shortcuts import render
+from django.http import HttpResponse, HttpResponseRedirect
+from todo.models import Weight
+from todo.forms import CreateForm, AddWeightForm
+
+def oldhome(request):
+    response = HttpResponse()
+    response.write("<body><html>\n")
+    response.write("<title>accessing a database for fun and profit, well for fun</title>\n")
+    response.write("<center><H4>no static pages here<br> goto www.gorchs.net for static pages<br>Django and SQLite make this too easy...</H4></center><HR>\n")
+    link = "<a href=\"/fitness/weight/\">\n"
+    response.write("<li>%srecordings of my weight</a></li>\n" % link)
+    link = "<a href=\"/fitness/running/\">\n"
+    response.write("<li>%sskimpy running diary</a></li>\n" % link)
+    link = "<a href=\"/fitness/reps/\">\n"
+    response.write("<li>%sexercise</a></li>\n" % link)
+    link = "<a href=\"/fitness/reps/chinups/\">\n"
+    response.write("<li>%schinups</a></li>\n" % link)
+    link = "<a href=\"/fitness/reps/pushups/\">\n"
+    response.write("<li>%spushups</a></li>\n" % link)
+    link = "<a href=\"/people/\">\n"
+    response.write("<li>%slist of people</a></li>\n" % link)
+    link = "<a href=\"/police/\">\n"
+    response.write("<li>%sHelp Police!</li>\n" % link)
+    response.write("<p><a href=\"https://github.com/fdo/mydjango\">the code for this website</a>")
+    response.write("</body></html>\n")
+    return response
+
+def home(response):
+    return render(response, "todo/home.html", {})
+
+def running(response):
+    return render(response, "todo/running.html", {})
+
+def weight(response):
+    return render(response, "todo/oldweight.html", {})
+
+def addweight(response):
+    if response.method == "POST":
+        form = AddWeightForm(response.POST)
+        if form.is_valid():
+            d = form.cleaned_data["data"]    
+            w = form.cleaned_data["damage"]  # 'damage' == cutesy name for weight
+            f = Weight(data=d, damage=w)
+            f.timeenter = datetime.now()
+            f.save()
+            form = AddWeightForm()
+    else:
+        form = AddWeightForm()
+    return render(response, "todo/addweight.html", {"form": form})
+
+
+
+#    if response.method == 'GET':
+#        message = 'Please add your data to our database.  Thanks for reporting.'
+#    if response.method == 'POST':
+#        if response.POST['submit'] == 'save':
+#            rf = AddWeightForm(response.POST.copy())
+#        rf = AddWeightForm(response.POST.copy())
+#        if rf.is_valid():
+#            try:
+#                report=AddWeight()
+#                report.data = rf.cleaned.data['data']
+#                report.damage = rf.cleaned.data['damage']
+#                print("LOOKY")
+#                print(report.damage)
+#                report.timeenter = datetime.now()
+#                report.save()
+#                message = 'TANX'
+#            except:
+#                message = 'Database error %s' % rf.is_valid()
+#        else:
+#            message = 'Invalid data in form'
+#    return render(response, 'todo/addweight.html', {'form': form})
+
+def oldweight(response):
+    response = HttpResponse()
+    response.write("<body><html>\n")
+    response.write("<title>add todays weight into the database</title>\n")
+    wlist = Weight.objects.all()
+    for p in reversed(wlist):
+#    for p in wlist:
+        junk = "I weighed %s on %s" % (p.damage,p.timeenter)
+        response.write("%s--%s.<br>" % (junk,p.data))
+    response.write("that is all, folks")
+    response.write("</body></html>")
+    return response
+
+def create(response):
+    if response.method == "POST":
+        form = CreateForm(response.POST)
+        if form.is_valid():
+            d = form.cleaned_data["data"]    
+            w = form.cleaned_data["damage"]  # 'damage' == cutesy name for weight
+            f = Weight(data=d, damage=w)
+            f.timeenter = datetime.now()
+            f.save()
+            form = CreateForm()
+    else:
+        form = CreateForm()
+    return render(response, "todo/create.html", {"form": form})

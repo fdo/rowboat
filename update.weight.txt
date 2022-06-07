@@ -1,0 +1,20 @@
+-- CREATE TABLE IF NOT EXISTS "todo_weight" (
+--   "id" integer NOT NULL PRIMARY KEY AUTOINCREMENT
+-- , "data" varchar(200) NOT NULL
+-- , "damage" decimal NOT NULL
+-- , "timeenter" datetime NOT NULL
+-- );
+
+
+
+-- INSERT INTO todo_weight VALUES
+-- (841
+-- ,'some fixing up of this website is just the usual but I will look at techwithtim to research. Yesterday was a birthday party for Grandma. So not worried, I am holding steady, this is just a blip'
+-- ,161
+-- ,'2022-02-13 12:53:52.910444'
+-- );
+
+-- update todo_weight set data = 'Back! I am surprised I lost weight on vacation. It was a great one!' where rowid = 893;
+-- ate todo_weight set timeenter = '2022-04-05 09:05:05' where rowid = 889 ;
+
+-- UPDATE todo_weight SET timeenter = '2022-05-08 09:30:00' WHERE rowid = 909 ;

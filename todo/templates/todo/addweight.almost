@@ -1,0 +1,18 @@
+{% extends 'todo/base.html' %}
+{% block title %}
+Add today's weight
+{% endblock %}
+ 
+{% block content %}
+    <h3>{{ message }}</h3>
+             <HR>
+    <div>
+        <form method="post" action=".">
+            <table>
+            {% csrf_token %}
+                {{form}}
+            </table>
+            <button type="submit",name="save">Add Weight</button>
+        </form>
+    </div>
+{% endblock %}
