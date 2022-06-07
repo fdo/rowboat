@@ -1,0 +1,1 @@
+thisis a very short readme for a simple django that updates a diary in my sqlite db.
