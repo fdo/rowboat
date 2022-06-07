@@ -1,6 +1,0 @@
-from django import forms
-
-class AddWeight(forms.Form):
-UNFINISHED,
-
-LOOK AT https://www.techwithtim.net/tutorials/django/simple-forms/
