@@ -1,4 +1,0 @@
-select * from todo_running where rowid > 1034;
-
-update todo_running set minutes = 46 where rowid = 1036 ;
-select * from todo_running where rowid > 1034;
