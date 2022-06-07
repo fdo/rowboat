@@ -1,1 +1,0 @@
-select * from todo_weight where rowid > 920;
